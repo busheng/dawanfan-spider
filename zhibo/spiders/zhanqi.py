@@ -11,7 +11,7 @@ class ZhanqiSpider(BaseSpider):
    start_urls = filter(None,web_instance.web_urls)
 
    def parse(self, response):
-        for sel in response.xpath('//div[@class = "live-list-tabc"]/ul/li'):
+        for sel in response.xpath('//div[@class = "live-list-tabc" and not(p[@class = "no-videoList-title"])]/ul/li'):
             		item = ZhiboItem()
 			item['zhubo'] = "zhanqi"+sel.xpath('a/div[@class ="info-area"]/div[@class ="meat"]/span[@class = "anchor anchor-to-cut dv"]/text()').extract()[0]
             		item['img_url'] = sel.xpath('a/div[@class="imgBox"]/img/@src').extract()[0]
