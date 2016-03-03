@@ -11,16 +11,16 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import func
 from sqlalchemy import update
-from models import exeu, db_connect, create_douyu_table, create_table
+from models import exeu, db_connect, create_all_table, create_table
 
 class ZhiboPipeline(object):
     
     i = 0; 
-    lists = ['dota2','baby','ls','war3','other','lol']
+    lists = ['dota2','baby','ls','war3','other','lol','wow','dnf','cf']
     table_list = {}
     def __init__(self):
         engine = db_connect()
-        create_douyu_table(engine)
+        create_all_table(engine)
         self.Session = sessionmaker(bind=engine)
     	self.prepare()
 
