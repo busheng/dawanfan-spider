@@ -6,62 +6,47 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 from sqlalchemy.orm import sessionmaker
-from models import Zhibo_dota22, Zhibo_lol2, Zhibo_ls2,Zhibo_war32,Zhibo_other2, Zhibo_baby2, db_connect, create_douyu_table
+from sqlalchemy import create_engine, Table, Column, Float, Integer, String, MetaData, ForeignKey
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import func
+from sqlalchemy import update
+from models import exeu, db_connect, create_douyu_table, create_table
 
 class ZhiboPipeline(object):
-
+    
+    i = 0; 
+    lists = ['dota2','baby','ls','war3','other','lol']
+    table_list = {}
     def __init__(self):
         engine = db_connect()
         create_douyu_table(engine)
         self.Session = sessionmaker(bind=engine)
+    	self.prepare()
+
+    def prepare(self):
+        session = self.Session()
+	self.i = session.query(func.count(exeu.used)).\
+		filter(exeu.used==1).scalar()
+	suffix = ''
+	if self.i == 0:
+		suffix = '2'
+	for game in self.lists:
+		self.table_list[game] = create_table(game+suffix);
 
     def process_item(self, item, spider):
         session = self.Session()
-	if item['cate'] == "dota2":
-		ins = session.query(Zhibo_dota22).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_dota22(**item)
-        		session.add(zhibo)
-	elif item['cate'] == "lol":
-		ins = session.query(Zhibo_lol2).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_lol2(**item)
-        		session.add(zhibo)
-	elif item['cate'] == "ls":
-		ins = session.query(Zhibo_ls2).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_ls2(**item)
-        		session.add(zhibo)
-	elif item['cate'] == "baby":
-		ins = session.query(Zhibo_baby2).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_baby2(**item)
-        		session.add(zhibo)
-	elif item['cate'] == "war3":
-		ins = session.query(Zhibo_war32).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_war32(**item)
-        		session.add(zhibo)
-
-	else:         	
-		ins = session.query(Zhibo_other2).filter_by(zhubo=item['zhubo']).first()
-		if ins: 
-			_update_(ins,item)
-		else:
-        		zhibo = Zhibo_other2(**item)
-        		session.add(zhibo)
+	table_name = item['cate']
+	tables = self.table_list
+	ins = session.query(tables[table_name]).filter_by(zhubo=item['zhubo']).first()
+	if ins: 
+		_update_(ins,item)
+	else:
+        	zhibo = tables[table_name](**item)
+        	session.add(zhibo)
         session.commit()
         return item
+
 
 def _update_(ins, item):
 	ins.title = item['title']
