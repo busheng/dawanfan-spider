@@ -45,7 +45,7 @@ class Webhelp:
        "",    				       #7.CF
        "",    				       #8.hwzb
        "http://www.huomaotv.cn/channel/sc2",   #9.sc2
-       "",                                     #10.movie
+       "http://www.huomaotv.cn/live_list?gid=87",#10.movie
        ""                                      #11.other
    ],
    'huya' : [
@@ -57,10 +57,10 @@ class Webhelp:
         "http://www.huya.com/g/wow",           #5.WOW
         "http://www.huya.com/g/2", 	       #6.DNF
         "http://www.huya.com/g/cf",    	       #7.CF
-        "",    				       #8.hwzb
+        "http://www.huya.com/g/2165",          #8.hwzb
         "",    				       #9.sc2
-        "",    				       #10.movie
-        "",    				       #11.other
+        "http://www.huya.com/g/2333",          #10.movie
+        "http://www.huya.com/g/100002",        #11.other
         "",    				       #12.
         ""				       #13.
     ],
@@ -73,9 +73,9 @@ class Webhelp:
         "http://www.panda.tv/cate/wow",   	#5.WOW
         "http://www.panda.tv/cate/dnf",         #6.DNF
         "http://www.panda.tv/cate/cf",    	#7.CF
-        "",    				        #8.hwzb
-        "",    				        #9.sc2
-        "",    				        #10.movie
+        "http://www.panda.tv/cate/hwzb",        #8.hwzb
+        "http://www.panda.tv/cate/starcraft",   #9.sc2
+        "http://www.panda.tv/cate/cartoon",    	#10.movie
 	"http://www.panda.tv/cate/zhuji"  	#11other
 
    ],
@@ -100,7 +100,11 @@ class Webhelp:
         "",    				        #8.hwzb
         "",    				        #9.sc2
         "",    				        #10.movie
-	"http://www.zhanqi.tv/games/danji"	#11.
+	"http://www.zhanqi.tv/games/danji",	#11.
+	"",
+	"",
+	"",
+	"http://www.zhanqi.tv/games/sanguosha" #san guo sha
 ]}
 
    web_urls = []
