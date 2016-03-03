@@ -35,3 +35,4 @@ class exeu(DeclarativeBase):
 
     tableID = Column(Integer, primary_key=True)
     used = Column(Integer)
+
