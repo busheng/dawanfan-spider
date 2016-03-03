@@ -16,13 +16,13 @@ from models import exeu, db_connect, create_all_table, create_table
 class ZhiboPipeline(object):
     
     i = 0; 
-    lists = ['dota2','baby','ls','war3','other','lol','wow','dnf','cf']
+    lists = ['dota2','baby','ls','war3','other','lol','wow','dnf','cf','hwzb','sc2','movie']
     table_list = {}
     def __init__(self):
         engine = db_connect()
-        create_all_table(engine)
         self.Session = sessionmaker(bind=engine)
     	self.prepare()
+	create_all_table(engine)
 
     def prepare(self):
         session = self.Session()

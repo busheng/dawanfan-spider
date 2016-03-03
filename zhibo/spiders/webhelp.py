@@ -9,21 +9,30 @@ class Webhelp:
    #  5.WOW
    #  6.DNF
    #  7.CF
-   #  8.other
+   #  8.hwzb 
+   #  9.sc2
+   #  10.movie
+   #  11.other
    #
    #
    #
    web_map = {
    'douyu' : [
-       "http://www.douyutv.com/directory/game/DOTA2",
-	"http://www.douyutv.com/directory/game/LOL",
-	"http://www.douyutv.com/directory/game/How",
-	"http://www.douyutv.com/directory/game/mszb",
-	"http://www.douyutv.com/directory/game/qmxx",
-	"http://www.douyutv.com/directory/game/WOW",
-	"http://www.douyutv.com/directory/game/DNF",
-	"http://www.douyutv.com/directory/game/CF",
-	"http://www.douyutv.com/directory/game/TVgame"
+       "http://www.douyutv.com/directory/game/DOTA2",  #0
+	"http://www.douyutv.com/directory/game/LOL",   #1
+	"http://www.douyutv.com/directory/game/How",   #2
+	"http://www.douyutv.com/directory/game/mszb",  #3
+	"http://www.douyutv.com/directory/game/qmxx",  #4
+	"http://www.douyutv.com/directory/game/WOW",   #5
+	"http://www.douyutv.com/directory/game/DNF",   #6
+	"http://www.douyutv.com/directory/game/CF",    #7
+	"http://www.douyutv.com/directory/game/yqly",  #8
+	"http://www.douyutv.com/directory/game/SC",    #9
+	"http://www.douyutv.com/directory/game/wlrm",  #10
+	"http://www.douyutv.com/directory/game/TVgame",#11
+	"",
+	"",
+	""
    ],
    'huomao' : [
        "http://www.huomaotv.cn/channel/dota2", #0.doat2
@@ -34,8 +43,10 @@ class Webhelp:
        "",    				       #5.WOW
        "",    				       #6.DNF
        "",    				       #7.CF
-       "",    				       #8.
-       "http://www.huomaotv.cn/channel/sc2"    #9.other
+       "",    				       #8.hwzb
+       "http://www.huomaotv.cn/channel/sc2",   #9.sc2
+       "",                                     #10.movie
+       ""                                      #11.other
    ],
    'huya' : [
         "http://www.huya.com/g/dota2",         #0.dota2
@@ -46,7 +57,12 @@ class Webhelp:
         "http://www.huya.com/g/wow",           #5.WOW
         "http://www.huya.com/g/2", 	       #6.DNF
         "http://www.huya.com/g/cf",    	       #7.CF
-        "",    				       #8.
+        "",    				       #8.hwzb
+        "",    				       #9.sc2
+        "",    				       #10.movie
+        "",    				       #11.other
+        "",    				       #12.
+        ""				       #13.
     ],
    'panda' : [
        "http://www.panda.tv/cate/dota2",	#0.dota2
@@ -57,7 +73,10 @@ class Webhelp:
         "http://www.panda.tv/cate/wow",   	#5.WOW
         "http://www.panda.tv/cate/dnf",         #6.DNF
         "http://www.panda.tv/cate/cf",    	#7.CF
-	"http://www.panda.tv/cate/zhuji"  	#8other
+        "",    				        #8.hwzb
+        "",    				        #9.sc2
+        "",    				        #10.movie
+	"http://www.panda.tv/cate/zhuji"  	#11other
 
    ],
    'longzhu' : [
@@ -78,8 +97,10 @@ class Webhelp:
         "http://www.zhanqi.tv/games/wow",       #5.WOW
         "http://www.zhanqi.tv/games/dnf",       #6.DNF
         "",    				        #7.CF
-        "",    				        #8.
-	"http://www.zhanqi.tv/games/danji"	#9.
+        "",    				        #8.hwzb
+        "",    				        #9.sc2
+        "",    				        #10.movie
+	"http://www.zhanqi.tv/games/danji"	#11.
 ]}
 
    web_urls = []
@@ -108,6 +129,12 @@ class Webhelp:
 		res = "dnf"
 	elif link == self.web_urls[7]:
 		res = "cf"
+	elif link == self.web_urls[8]:
+		res = "hwzb"
+	elif link == self.web_urls[9]:
+		res = "sc2"
+	elif link == self.web_urls[10]:
+		res = "movie"
 	else:
 		res = "other"	
 	return res
