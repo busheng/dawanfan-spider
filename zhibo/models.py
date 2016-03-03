@@ -13,7 +13,7 @@ def db_connect():
    # return create_engine(URL(**settings.DATABASE))
    return create_engine('mysql://root:LOUbu123@localhost:3306/zhibo?charset=utf8',echo=False)
 
-def create_douyu_table(engine):
+def create_all_table(engine):
     DeclarativeBase.metadata.create_all(engine)
 
 def create_table(name):

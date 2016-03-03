@@ -1,14 +1,15 @@
 import re
 import string
 class Webhelp:
-   #  1.dota2
-   #  2.LOL
-   #  3.lushi
-   #  4.moshou war3
-   #  5.baby
-   #  6.other
-   #  7.
-   #
+   #  0.dota2
+   #  1.LOL
+   #  2.lushi
+   #  3.moshou war3
+   #  4.baby
+   #  5.WOW
+   #  6.DNF
+   #  7.CF
+   #  8.other
    #
    #
    #
@@ -19,40 +20,66 @@ class Webhelp:
 	"http://www.douyutv.com/directory/game/How",
 	"http://www.douyutv.com/directory/game/mszb",
 	"http://www.douyutv.com/directory/game/qmxx",
+	"http://www.douyutv.com/directory/game/WOW",
+	"http://www.douyutv.com/directory/game/DNF",
+	"http://www.douyutv.com/directory/game/CF",
 	"http://www.douyutv.com/directory/game/TVgame"
    ],
    'huomao' : [
-       "http://www.huomaotv.cn/channel/dota2", #1.doat2
-       "http://www.huomaotv.cn/channel/lol",   #2.lol 
-       "http://www.huomaotv.cn/channel/ls",    #3.lushi
-       "",	                               #4.war3
-       "",                                     #5.baby
-       "http://www.huomaotv.cn/channel/sc2"    #6.other
+       "http://www.huomaotv.cn/channel/dota2", #0.doat2
+       "http://www.huomaotv.cn/channel/lol",   #1.lol 
+       "http://www.huomaotv.cn/channel/ls",    #2.lushi
+       "",	                               #3.war3
+       "",                                     #4.baby
+       "",    				       #5.WOW
+       "",    				       #6.DNF
+       "",    				       #7.CF
+       "",    				       #8.
+       "http://www.huomaotv.cn/channel/sc2"    #9.other
    ],
    'huya' : [
-        "http://www.huya.com/g/dota2",
-	"http://lol.huya.com",
-	"http://www.huya.com/g/393",
-	"",
-	"http://www.huya.com/g/1663",
-	"http://www.huya.com/g/2" #dnf
-   ],
+        "http://www.huya.com/g/dota2",         #0.dota2
+	"http://lol.huya.com",                 #1.lol
+	"http://www.huya.com/g/393",   	       #2.lushi
+	"",                                    #3.war3
+	"http://www.huya.com/g/1663",          #4.baby
+        "",    				       #5.WOW
+        "http://www.huya.com/g/2", 	       #6.DNF
+        "",    				       #7.CF
+        "",    				       #8.
+    ],
    'panda' : [
-       "http://www.panda.tv/cate/dota2",
-	"http://www.panda.tv/cate/lol",
-	"http://www.panda.tv/cate/hearthstone",
+       "http://www.panda.tv/cate/dota2",	#0.dota2
+	"http://www.panda.tv/cate/lol",         #1.lol
+	"http://www.panda.tv/cate/hearthstone", #2.lushi
+	"",                                     #3.war3
+	"http://www.panda.tv/cate/yzdr", 	#4.baby
+        "",    				        #5.WOW
+        "",    				        #6.DNF
+        "",    				        #7.CF
+	"http://www.panda.tv/cate/hwzb"  	#8other
+
+   ],
+   'longzhu' : [
+        "",
+	"http://longzhu.com/channels/lol",
 	"",
-	"http://www.panda.tv/cate/yzdr",
-	"http://www.panda.tv/cate/hwzb"
+	"",
+	"",
+	""
 
    ],
    'zhanqi' : [
-       "http://www.zhanqi.tv/games/dota2",
-	"http://www.zhanqi.tv/games/lol",
-	"http://www.zhanqi.tv/games/how",
-	"",
-	"",
-	"http://bb.zhanqi.tv/"
+       "http://www.zhanqi.tv/games/dota2",	#0.dota2
+	"http://www.zhanqi.tv/games/lol", 	#1.lol
+	"http://www.zhanqi.tv/games/how",	#2.lushi
+	"",					#3.war3	
+	"",					#4.baby
+        "",    				        #5.WOW
+        "",    				        #6.DNF
+        "",    				        #7.CF
+        "",    				        #8.
+	"http://bb.zhanqi.tv/"			#9.
 ]}
 
    web_urls = []
@@ -75,6 +102,12 @@ class Webhelp:
 		res = "war3"
 	elif link == self.web_urls[4]:
 		res = "baby"
+	elif link == self.web_urls[5]:
+		res = "wow"
+	elif link == self.web_urls[6]:
+		res = "dnf"
+	elif link == self.web_urls[7]:
+		res = "cf"
 	else:
 		res = "other"	
 	return res
