@@ -30,7 +30,7 @@ class Webhelp:
        "http://www.huomaotv.cn/channel/lol",   #1.lol 
        "http://www.huomaotv.cn/channel/ls",    #2.lushi
        "",	                               #3.war3
-       "",                                     #4.baby
+       "http://www.huomaotv.cn/channel/mnyd",  #4.baby
        "",    				       #5.WOW
        "",    				       #6.DNF
        "",    				       #7.CF
@@ -41,11 +41,11 @@ class Webhelp:
         "http://www.huya.com/g/dota2",         #0.dota2
 	"http://lol.huya.com",                 #1.lol
 	"http://www.huya.com/g/393",   	       #2.lushi
-	"",                                    #3.war3
+	"http://www.huya.com/g/war3",          #3.war3
 	"http://www.huya.com/g/1663",          #4.baby
-        "",    				       #5.WOW
+        "http://www.huya.com/g/wow",           #5.WOW
         "http://www.huya.com/g/2", 	       #6.DNF
-        "",    				       #7.CF
+        "http://www.huya.com/g/cf",    	       #7.CF
         "",    				       #8.
     ],
    'panda' : [
@@ -54,10 +54,10 @@ class Webhelp:
 	"http://www.panda.tv/cate/hearthstone", #2.lushi
 	"",                                     #3.war3
 	"http://www.panda.tv/cate/yzdr", 	#4.baby
-        "",    				        #5.WOW
-        "",    				        #6.DNF
-        "",    				        #7.CF
-	"http://www.panda.tv/cate/hwzb"  	#8other
+        "http://www.panda.tv/cate/wow",   	#5.WOW
+        "http://www.panda.tv/cate/dnf",         #6.DNF
+        "http://www.panda.tv/cate/cf",    	#7.CF
+	"http://www.panda.tv/cate/zhuji"  	#8other
 
    ],
    'longzhu' : [
@@ -73,13 +73,13 @@ class Webhelp:
        "http://www.zhanqi.tv/games/dota2",	#0.dota2
 	"http://www.zhanqi.tv/games/lol", 	#1.lol
 	"http://www.zhanqi.tv/games/how",	#2.lushi
-	"",					#3.war3	
+	"http://www.zhanqi.tv/games/war3",	#3.war3	
 	"",					#4.baby
-        "",    				        #5.WOW
-        "",    				        #6.DNF
+        "http://www.zhanqi.tv/games/wow",       #5.WOW
+        "http://www.zhanqi.tv/games/dnf",       #6.DNF
         "",    				        #7.CF
         "",    				        #8.
-	"http://bb.zhanqi.tv/"			#9.
+	"http://www.zhanqi.tv/games/danji"	#9.
 ]}
 
    web_urls = []
