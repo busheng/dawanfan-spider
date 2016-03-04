@@ -11,7 +11,7 @@ engine = db_connect()
 create_all_table(engine)
 DBsession = sessionmaker(bind=engine)
 session = DBsession()	
-lists = ['dota2','baby','ls','war3','other','lol','dnf','wow','cf']
+lists = ['dota2','baby','ls','war3','other','lol','dnf','wow','cf','hwzb', 'movie', 'sc2']
 try:
 	suffix = ''
 	i = session.query(func.count(exeu.used)).\
