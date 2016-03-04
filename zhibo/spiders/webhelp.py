@@ -93,7 +93,7 @@ class Webhelp:
 	"http://www.zhanqi.tv/games/lol", 	#1.lol
 	"http://www.zhanqi.tv/games/how",	#2.lushi
 	"http://www.zhanqi.tv/games/war3",	#3.war3	
-	"",					#4.baby
+	"http://bb.zhanqi.tv/",			#4.baby
         "http://www.zhanqi.tv/games/wow",       #5.WOW
         "http://www.zhanqi.tv/games/dnf",       #6.DNF
         "",    				        #7.CF
