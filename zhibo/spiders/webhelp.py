@@ -18,18 +18,18 @@ class Webhelp:
    #
    web_map = {
    'douyu' : [
-       "http://www.douyutv.com/directory/game/DOTA2",  #0
-	"http://www.douyutv.com/directory/game/LOL",   #1
-	"http://www.douyutv.com/directory/game/How",   #2
-	"http://www.douyutv.com/directory/game/mszb",  #3
-	"http://www.douyutv.com/directory/game/qmxx",  #4
-	"http://www.douyutv.com/directory/game/WOW",   #5
-	"http://www.douyutv.com/directory/game/DNF",   #6
-	"http://www.douyutv.com/directory/game/CF",    #7
-	"http://www.douyutv.com/directory/game/yqly",  #8
-	"http://www.douyutv.com/directory/game/SC",    #9
-	"http://www.douyutv.com/directory/game/wlrm",  #10
-	"http://www.douyutv.com/directory/game/TVgame",#11
+       "http://www.douyu.com/directory/game/DOTA2",  #0
+	"http://www.douyu.com/directory/game/LOL",   #1
+	"http://www.douyu.com/directory/game/How",   #2
+	"http://www.douyu.com/directory/game/mszb",  #3
+	"http://www.douyu.com/directory/game/qmxx",  #4
+	"http://www.douyu.com/directory/game/WOW",   #5
+	"http://www.douyu.com/directory/game/DNF",   #6
+	"http://www.douyu.com/directory/game/CF",    #7
+	"http://www.douyu.com/directory/game/yqly",  #8
+	"http://www.douyu.com/directory/game/SC",    #9
+	"http://www.douyu.com/directory/game/wlrm",  #10
+	"http://www.douyu.com/directory/game/TVgame",#11
 	"",
 	"",
 	""
