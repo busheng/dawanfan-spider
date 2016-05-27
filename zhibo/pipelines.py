@@ -37,6 +37,7 @@ class ZhiboPipeline(object):
     def process_item(self, item, spider):
         session = self.Session()
 	table_name = item['cate']
+	item['link'] = item['link'] + '?from=dawanfantv'
 	tables = self.table_list
 	ins = session.query(tables[table_name]).filter_by(zhubo=item['zhubo']).first()
 	if ins: 
